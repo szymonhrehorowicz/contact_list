@@ -1,0 +1,26 @@
+.content {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  padding: 3rem;
+  text-align: center;
+  background: rgba($color: $primary-color, $alpha: 0.7);
+
+  &__header {
+    font-weight: 400;
+    font-size: 4rem;
+
+    &--main {
+      letter-spacing: 0.3rem;
+    }
+    &--sub {
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: 0.4rem;
+      font-weight: 400;
+      font-size: 5rem;
+    }
+  }
+}

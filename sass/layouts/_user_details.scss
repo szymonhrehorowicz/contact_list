@@ -1,0 +1,13 @@
+.user {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  &__details {
+    margin-bottom: 1rem;
+
+    &--main {
+      font-weight: 300;
+    }
+  }
+}

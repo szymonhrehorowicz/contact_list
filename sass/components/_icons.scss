@@ -1,0 +1,52 @@
+.icon {
+  display: inline-block;
+
+  &--logo {
+    &--bg {
+      position: relative;
+      top: 0.4rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &--nav {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+  }
+
+  &--details {
+    width: 2rem;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      transform: scale(1.6);
+    }
+  }
+
+  &--back,
+  &--add {
+    transition: all 0.5s ease-out;
+    position: absolute;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+
+  &--back {
+    top: 3rem;
+    left: 3rem;
+    width: 6rem;
+  }
+
+  &--add {
+    top: 3rem;
+    right: 3rem;
+    width: 4rem;
+  }
+}

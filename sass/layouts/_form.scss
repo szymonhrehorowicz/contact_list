@@ -1,0 +1,61 @@
+.add {
+  font-size: 2.4rem;
+  font-weight: 400;
+  width: 50%;
+  margin: 3rem auto 0;
+
+  &__wrapper {
+    position: relative;
+    &:nth-child(1) {
+      left: -2.7rem;
+    }
+    &:nth-child(2) {
+      left: -5.5rem;
+    }
+    &:nth-child(3) {
+      left: -3.2rem;
+    }
+    &:nth-child(4) {
+      left: -3.5rem;
+    }
+    &:nth-child(5) {
+      left: -6.5rem;
+    }
+    &:nth-child(6) {
+      left: -6.6rem;
+    }
+  }
+
+  &__input {
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-out;
+
+  &--submit {
+    margin-top: 3rem;
+    background: $white-color;
+  }
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0.2rem 0.2rem 1rem rgb(90, 90, 90);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}

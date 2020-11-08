@@ -1,0 +1,273 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff;
+  box-sizing: border-box;
+  background: url(../media/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); }
+
+.error {
+  color: #f00; }
+
+.success {
+  color: #fff;
+  font-size: 2rem; }
+
+.icon {
+  display: inline-block; }
+  .icon--logo--bg {
+    position: relative;
+    top: 0.4rem;
+    width: 5rem;
+    height: 5rem; }
+  .icon--nav {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem; }
+  .icon--details {
+    width: 2rem;
+    transition: all 0.5s ease-out; }
+    .icon--details:hover {
+      transform: scale(1.6); }
+  .icon--back, .icon--add {
+    transition: all 0.5s ease-out;
+    position: absolute;
+    cursor: pointer; }
+    .icon--back:hover, .icon--add:hover {
+      transform: scale(1.4); }
+  .icon--back {
+    top: 3rem;
+    left: 3rem;
+    width: 6rem; }
+  .icon--add {
+    top: 3rem;
+    right: 3rem;
+    width: 4rem; }
+
+.add {
+  font-size: 2.4rem;
+  font-weight: 400;
+  width: 50%;
+  margin: 3rem auto 0; }
+  .add__wrapper {
+    position: relative; }
+    .add__wrapper:nth-child(1) {
+      left: -2.7rem; }
+    .add__wrapper:nth-child(2) {
+      left: -5.5rem; }
+    .add__wrapper:nth-child(3) {
+      left: -3.2rem; }
+    .add__wrapper:nth-child(4) {
+      left: -3.5rem; }
+    .add__wrapper:nth-child(5) {
+      left: -6.5rem; }
+    .add__wrapper:nth-child(6) {
+      left: -6.6rem; }
+  .add__input {
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 300; }
+
+.btn {
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-out; }
+  .btn--submit {
+    margin-top: 3rem;
+    background: #fff; }
+  .btn:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0.2rem 0.2rem 1rem #5a5a5a; }
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: none; }
+
+.nav {
+  position: absolute;
+  z-index: 3;
+  top: 3rem;
+  right: 0;
+  width: 50%;
+  height: 10rem;
+  padding: 0 3 0 0rem; }
+  .nav__btn {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    width: 5.5rem;
+    height: 0.5rem;
+    transform: translateY(-50%);
+    background: rgba(37, 183, 62, 0.7);
+    transition: all 0.5s ease-out;
+    cursor: pointer; }
+    .nav__btn::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -1.2rem;
+      transition: all 0.5s ease-out;
+      background: rgba(37, 183, 62, 0.7); }
+    .nav__btn::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 1.2rem;
+      transition: all 0.5s ease-out;
+      background: rgba(37, 183, 62, 0.7); }
+    .nav__btn.active {
+      background: transparent; }
+      .nav__btn.active::after {
+        transform: rotate(45deg);
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 0; }
+      .nav__btn.active::before {
+        transform: rotate(-45deg);
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 0; }
+      .nav__btn.active:hover {
+        background: transparent; }
+        .nav__btn.active:hover::after, .nav__btn.active:hover::before {
+          background-color: white; }
+    .nav__btn:hover {
+      background: #25b73e; }
+      .nav__btn:hover::after, .nav__btn:hover::before {
+        background: #25b73e; }
+  .nav__list {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    right: -100%;
+    transition: all 0.5s ease-out;
+    background: rgba(37, 183, 62, 0.7); }
+    .nav__list.active {
+      right: 0; }
+  .nav__item {
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    width: 15rem;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+    color: #fff; }
+    .nav__item__text {
+      display: block;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 6rem 0 0 0; }
+    .nav__item:hover {
+      background: #25b73e; }
+
+.table {
+  margin: 3rem auto 0; }
+  .table__header {
+    font-size: 2rem; }
+    .table__header th {
+      border-bottom: 2px solid #fff;
+      font-weight: 400;
+      padding: 0.5rem; }
+  .table__user {
+    transition: all 0.5s ease-out; }
+    .table__user td,
+    .table__user th {
+      padding: 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 300;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
+    .table__user th {
+      font-weight: 400; }
+    .table__user:hover {
+      background: rgba(37, 183, 62, 0.9); }
+
+.user {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  font-weight: 400; }
+  .user__details {
+    margin-bottom: 1rem; }
+    .user__details--main {
+      font-weight: 300; }
+
+.content {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(37, 183, 62, 0.7); }
+  .content__header {
+    font-weight: 400;
+    font-size: 4rem; }
+    .content__header--main {
+      letter-spacing: 0.3rem; }
+    .content__header--sub {
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: 0.4rem;
+      font-weight: 400;
+      font-size: 5rem; }
+
+.header {
+  position: absolute;
+  z-index: 3;
+  background: rgba(37, 183, 62, 0.7);
+  top: 3rem;
+  left: 0;
+  width: 50%;
+  height: 10rem;
+  font-size: 4rem;
+  padding: 0 0 0 3rem; }
+  .header__text {
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 2rem; }
+
+.footer {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  width: 50%;
+  padding: 0 0 0 3rem;
+  font-size: 2rem;
+  background: rgba(37, 183, 62, 0.7); }
+  .footer__text {
+    display: inline-block;
+    font-weight: 400;
+    padding: 0.7rem 0; }
+
+/*# sourceMappingURL=main.css.map */
