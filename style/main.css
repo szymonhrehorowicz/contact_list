@@ -135,17 +135,17 @@ body {
       position: absolute;
       width: 100%;
       height: 100%;
-      top: -1.2rem;
       transition: all 0.5s ease-out;
-      background: rgba(37, 183, 62, 0.7); }
+      background: rgba(37, 183, 62, 0.7);
+      top: -1.2rem; }
     .nav__btn::before {
       content: "";
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 1.2rem;
       transition: all 0.5s ease-out;
-      background: rgba(37, 183, 62, 0.7); }
+      background: rgba(37, 183, 62, 0.7);
+      top: 1.2rem; }
     .nav__btn.active {
       background: transparent; }
       .nav__btn.active::after {
