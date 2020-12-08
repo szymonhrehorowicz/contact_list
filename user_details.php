@@ -7,7 +7,7 @@
           <?php 
             error_reporting(0);
             $id = $_GET["id"];
-            echo "<a href=\"del_user.php?id=". $id ."\">
+            echo "<a href=\"del_handler.php?id=". $id ."\">
                     <img class=\"icon icon--del\" src=\"./media/delete.svg\" alt=\"Usuń użytkownika\" title=\"Usuń użytkownika\" />
                   </a>";
             echo "<a href=\"edit_user.php?id=". $id ."\">
