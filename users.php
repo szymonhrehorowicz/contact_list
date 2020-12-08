@@ -1,16 +1,29 @@
 <?php include './partials/header.php' ?>
       <main class="content">
         <div class="content-nav">
-          <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
-          <img class="icon icon--add" id="addBtn" src="./media/add.svg" alt="Dodaj użytkownika" title="Dodaj użytkownika" />
+          <a href="/">
+            <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
+          </a>
+          <a href="add_user.php">
+            <img class="icon icon--add" id="addBtn" src="./media/add.svg" alt="Dodaj użytkownika" title="Dodaj użytkownika" />
+          </a>
         </div>
         <h1 class="content__header">
           <span class="content__header--main">Lista Kontaktowa</span>
         </h1>
         <?php 
           error_reporting(0);
+
           if($_GET["success"]) {
-            echo "<p class=\"success\">Pomyślnie dodano nowego użytkownika</p>";
+            if($_GET["type"] == "add") {
+              echo "<p class=\"success\">Pomyślnie dodano nowego użytkownika</p>";
+            }
+            if($_GET["type"] == "del"){
+              echo "<p class=\"success\">Pomyślnie usunięto użytkownika</p>";
+            }
+            if($_GET["type"] == "edit") {
+              echo "<p class=\"success\">Pomyślnie edytowano użytkownika</p>";
+            }
           }
         ?>
         <table class="table">
@@ -25,13 +38,12 @@
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-
-                $conn = new mysqli($servername, $username, $password);
+                $db = "lista_kontaktow";
+  
+                $conn = new mysqli($servername, $username, $password, $db);
                 if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
                 }
-
-                $conn->query("USE lista_kontaktow");
 
                 $sql = "SELECT id, imie, nazwisko, dzial FROM kontakty";
 

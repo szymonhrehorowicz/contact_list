@@ -1,7 +1,9 @@
 <?php include './partials/header.php' ?>
       <main class="content">
         <div class="content-nav">
-          <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
+          <a href="/users.php">
+            <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
+          </a>
         </div>
         <h1 class="content__header">
           <span class="content__header--main">Dodaj użytkownika</span>

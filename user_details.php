@@ -1,28 +1,38 @@
 <?php include './partials/header.php' ?>
       <main class="content">
         <div class="content-nav">
-          <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
+          <a href="/users.php">
+            <img class="icon icon--back" id="backBtn" src="./media/arrow.svg" alt="Wróć" title="Wróć" />
+          </a>
+          <?php 
+            error_reporting(0);
+            $id = $_GET["id"];
+            echo "<a href=\"del_user.php?id=". $id ."\">
+                    <img class=\"icon icon--del\" src=\"./media/delete.svg\" alt=\"Usuń użytkownika\" title=\"Usuń użytkownika\" />
+                  </a>";
+            echo "<a href=\"edit_user.php?id=". $id ."\">
+                    <img class=\"icon icon--edit\" src=\"./media/wrench.svg\" alt=\"Edytuj użytkownika\" title=\"Edytuj użytkownika\" />
+                  </a>";
+          ?>
+            
         </div>
         <h1 class="content__header">
           <span class="content__header--main">Szczegóły użytkownika</span>
         </h1>
         <section class="user">
             <?php 
-              error_reporting(0);
-              $id = $_GET["id"];
-
               if(!$id) {
                 echo "<p class=\"user__details error\">Nie podano żadnego id użytkownika".$id."</p>";
               }else {
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
+                $db = "lista_kontaktow";
   
-                $conn = new mysqli($servername, $username, $password);
+                $conn = new mysqli($servername, $username, $password, $db);
                 if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
                 }
-                $conn->query("USE lista_kontaktow");
   
                 $sql = "SELECT imie, nazwisko, dzial, adres, tel, email FROM kontakty WHERE id=".$id;
   

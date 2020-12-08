@@ -28,7 +28,9 @@
   }
 
   &--back,
-  &--add {
+  &--add,
+  &--del,
+  &--edit {
     transition: all 0.5s ease-out;
     position: absolute;
     cursor: pointer;
@@ -44,7 +46,14 @@
     width: 6rem;
   }
 
-  &--add {
+  &--edit {
+    top: 3rem;
+    width: 4rem;
+    right: 8rem;
+  }
+
+  &--add,
+  &--del {
     top: 3rem;
     right: 3rem;
     width: 4rem;

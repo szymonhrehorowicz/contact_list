@@ -1,8 +1,19 @@
 .error {
-  color: #f00;
+  color: $color-white;
+  font-size: 2rem;
+  padding: 0.6rem 0.8rem;
+  background: $color-red;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5rem;
 }
 
 .success {
-  color: #fff;
+  color: $color-white;
   font-size: 2rem;
+  padding: 0.6rem 0.8rem;
+  background: $color-green;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5rem;
 }
